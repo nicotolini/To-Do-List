@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Lista de Tareas</title>
+</head>
+
+<body>
+    <div class="list roundBorder">
+        <div class="header">   
+            <h1>Lista de Tareas</h1>
+        </div>
+        <div class="date">
+            <div class="dateleft">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        <form onsubmit="addNewTask(event)">
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva Tarea" class="roundBorder" autofocus>
+            <button type="submit" class="addTaskButton">+</button>
+            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">Ordenar</button>
+        </form>
+        <div class="filters-container">
+            <ul class="filters">
+                <li>
+                    <a class="selected filtro" href="#/">Todos</a>
+                </li>
+                <li>
+                    <a class="filtro" href="#/active">Pendientes</a>
+                </li>
+                <li>
+                    <a class="filtro" href="#/completed">Completados</a>
+                </li>
+            </ul>
+        </div>
+        <div id="tasksContainer"></div>
+    </div>
+    
+    <script src="/src/apps.js"></script>
+    
+</body>
+
+</html>
