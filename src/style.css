@@ -9,9 +9,26 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
-    height: 100vh;
+    height: 97vh;
     background-color: var(--diabled);
 }
+    /*-----SCROLLBAR-----*/
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #aac4ff #eef1ff;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #eef1ff;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #aac4ff;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+  }
+  /*-----SCROLLBAR-----*/
 .hidden {
 	display: none;
 }
@@ -106,6 +123,8 @@ input:focus {
 }
 
 .task {
+    display: flex;
+    justify-content: space-between;
     background-color: var(--primary);
     padding: 15px;
     margin-top: 15px;
@@ -115,7 +134,7 @@ input:focus {
 
 .completed {
     background-color: var(--diabled);
-    text-decoration: line-through;
+    
     color: var(--dark);
 }
 .header {
@@ -160,4 +179,21 @@ input:focus {
 .filters li a.selected {
 	background: var(--primary);
 	color: white;
+}
+.delete {
+    display: none;
+    
+   
+}
+
+.task:hover .delete{
+    display: flex;
+}
+.tachado {
+    text-decoration: line-through;
+}
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
