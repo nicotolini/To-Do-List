@@ -29,6 +29,11 @@ body {
     border: 1px solid #ffffff;
   }
   /*-----SCROLLBAR-----*/
+  #tasksContainer {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
 .hidden {
 	display: none;
 }

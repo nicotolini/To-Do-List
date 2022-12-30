@@ -68,10 +68,10 @@ function renderTasks() {
     filteredTasks.forEach((task, iTask) => {
         const taskHtml = document.createElement('div');
         const deleteHtml = document.createElement(`div`)
+        const taskSpan = document.createElement('span')
         deleteHtml.textContent = `X`
         deleteHtml.classList.add(`delete`)
         taskHtml.classList.add('task', 'roundBorder');
-        const taskSpan = document.createElement('span')
         taskSpan.classList.add(`truncate`)
         if (task.completed) {
             taskHtml.classList.add("completed")
